@@ -16,12 +16,12 @@ chmod +x /tmp/wp-cli.phar
 
 # Movemos wp-cli.phar a /usr/local/bin/wp
 mv /tmp/wp-cli.phar /usr/local/bin/wp
-exit
+
 # Eliminamos instalaciones previas de WordPress
 rm -rf /var/www/html/*
 
 # Descargamos WordPress en español en el directorio /var/www/html
-wp core download --locale=es_ES --path=/var/www/html --allow-root
+wp core download --path=/var/www/html --allow-root
 
 # Creamos una base de datos de wordpress
 mysql -u root -e "DROP DATABASE IF EXISTS $DB_NAME"
@@ -62,6 +62,8 @@ wp rewrite structure '/%postname%/' \
 wp plugin install wps-hide-login --activate \
     --path=/var/www/html \
     --allow-root
+
+exit
 
 # Configuramos una URL personalizada para la página de login
 wp option update whl_page $URL_HIDE_LOGIN --path=/var/www/html --allow-root
