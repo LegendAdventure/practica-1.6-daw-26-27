@@ -1,6 +1,6 @@
-#! /bin/bash
+#!/bin/bash
 set -ex
 
 ./install_lamp.sh
 ./setup_letsencrypt_certificate.sh
-./deploy_wordpress.sh
+./deploy_wordpress_root_directory.sh

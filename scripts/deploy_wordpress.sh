@@ -63,8 +63,6 @@ wp plugin install wps-hide-login --activate \
     --path=/var/www/html \
     --allow-root
 
-exit
-
 # Configuramos una URL personalizada para la página de login
 wp option update whl_page $URL_HIDE_LOGIN --path=/var/www/html --allow-root
 
