@@ -1,11 +1,12 @@
 <VirtualHost *:80>
-    ServerName ${LETS_ENCRYPT_DOMAIN}
     ServerAdmin ${LETS_ENCRYPT_EMAIL}
-    DocumentRoot /var/www/html/
-    DirectoryIndex index.php index.html
+    ServerName ${LETS_ENCRYPT_DOMAIN}
+    DocumentRoot /var/www/html
 
     <Directory /var/www/html>
+        Options Indexes FollowSymLinks
         AllowOverride All
+        Require all granted
     </Directory>
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
