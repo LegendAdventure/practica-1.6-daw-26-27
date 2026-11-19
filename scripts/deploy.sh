@@ -45,7 +45,7 @@ wp config create \
 
 # Instalamos WordPress
 wp core install \
-  --url=$CERTBOT_DOMAIN \
+  --url=$LETS_ENCRYPT_DOMAIN \
   --title="$WORDPRESS_TITLE" \
   --admin_user=$WORDPRESS_ADMIN_USER \
   --admin_password=$WORDPRESS_ADMIN_PASSWORD \

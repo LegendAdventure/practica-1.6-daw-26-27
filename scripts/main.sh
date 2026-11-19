@@ -2,5 +2,5 @@
 set -ex
 
 ./install_lamp.sh
-./setup_letsencrypt_certificate.sh
-./deploy_wordpress_root_directory.sh
+./setup_letsencrypt_https.sh
+./deploy.sh
